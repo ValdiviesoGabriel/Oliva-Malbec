@@ -1,0 +1,13 @@
+Flask==3.0.3
+Flask-marshmallow==0.15.0
+marshmallow==3.20.1
+werkzeug>=3.0.1 
+azure-monitor-opentelemetry==1.0.0
+setuptools>=65.5.1 
+Flask-SQLAlchemy==3.0.5
+SQLAlchemy==2.0.20
+Flask-Migrate==4.0.4
+psycopg2==2.9.7
+psycopg[binary]
+python-dotenv==1.0.1
+marshmallow-sqlalchemy
