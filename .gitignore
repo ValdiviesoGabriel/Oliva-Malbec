@@ -1,0 +1,15 @@
+.vscode/
+*.code-workspace
+
+venv/
+.env
+
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+migrations/versions/
+instance/
+
+.http

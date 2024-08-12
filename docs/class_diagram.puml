@@ -1,0 +1,50 @@
+@startuml Class
+
+package "Models" {
+    class User {
+        +Integer id
+        +String email
+        +String password_hash
+    }
+
+    class UserData {
+        +Integer id
+        +String first_name
+        +String last_name
+        +String dni
+        +String phone
+        +String address
+    }
+
+    class Role {
+        +Integer id
+        +String name
+    }
+
+    class Profile {
+        +Integer id
+        +Integer user_id
+        +Integer role_id
+    }
+
+    class Course {
+        +Integer id
+        +String name
+        +Integer teacher_id
+    }
+
+    class CourseStudent {
+        +Integer id
+        +Integer course_id
+        +Integer student_id
+        +Integer grade
+    }
+
+    User "1" --> "1" UserData
+    User "1" --> "1" Profile
+    User "1" --> "n" CourseStudent
+    Role "1" --> "n" Profile
+    Course "1" --> "n" CourseStudent
+}
+
+@enduml
