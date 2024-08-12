@@ -3,6 +3,7 @@ from app.models.profile import Profile
 from app.models.role import Role
 from app.models.user import User
 from app.models.user_data import UserData
+from app.utils.security import set_password
 
 def initialize_roles():
     role_names = ["ESTUDIANTE", "DOCENTE", "ADMINISTRADOR"]
@@ -19,7 +20,7 @@ def initialize_admin():
         db.session.commit()
         
         admin = User(email = "admin@admin.com", userdata = userdata)
-        admin.set_password("admin")
+        admin.password_hash = (set_password("admin"))
         db.session.add(admin)
         db.session.commit()
         
